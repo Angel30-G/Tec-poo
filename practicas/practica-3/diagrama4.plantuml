@@ -1,0 +1,36 @@
+@startuml 
+class Aplicacion
+Aplicacion : +int cantidad
+Aplicacion : +AgregarCompra()
+Aplicacion : +Factura()
+Aplicacion : +stock()
+class Libros{
+    -String Libro
+    -int Cantidad
+    -String Autor
+    +PedidoClientes()
+    +VentasAutor()
+    +SolicitarLibros()
+    +LibroMasVendido()
+}
+class Usuario{
+    +bool PrimerPedido
+    +bool Pedido
+    +String NombreUsuario
+    -int Contraseña
+    +PedidoClientes()
+    +VentasAutor()
+    +SolicitarLibros()
+    +LibroMasVendido()
+}
+class Pantallas <<interfaz>>{
+    +enviar()
+    +factura()
+    +LibrosPopulares()
+}
+
+Aplicacion *-- Pantallas
+Usuario --|> Libros
+Usuario --|> Aplicacion
+Libros --o Aplicacion
+@enduml

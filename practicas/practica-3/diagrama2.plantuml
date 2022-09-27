@@ -1,0 +1,11 @@
+@startuml 
+class Tablero
+Tablero : +String fichas-blancas
+Tablero : +String fichas-Negras
+Tablero : +List<c>
+Tablero : +VerMovimiento()
+Tablero : -AlmacenarMovimientos()
+Tablero : -Ganador()
+Tablero *-- Jugador1
+Tablero *-- Jugador2 
+@enduml

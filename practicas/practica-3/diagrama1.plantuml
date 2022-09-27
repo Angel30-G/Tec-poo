@@ -1,0 +1,10 @@
+@startuml 
+abstract class Redes
+Redes : #nodo
+Redes : +List<N>
+Redes : +Añadir()
+Redes : +Quitar()
+Redes <|-- Bus 
+Redes <|-- Estrella 
+Redes <|-- Anillo
+@enduml

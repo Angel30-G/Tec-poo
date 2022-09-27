@@ -1,0 +1,16 @@
+@startuml 
+class Alquiler
+Alquiler : +String vehiculo
+Alquiler : +int Deposito
+Alquiler : +List<v>
+Alquiler : +bool Disponible
+Alquiler : +vehiculoDevuelto()
+Alquiler : -FechaEntrega()
+Alquiler : -Factura()
+Alquiler o-- Cliente
+class Cliente{
+    +String Nombre
+    +int Cedula
+    +int DineroDisponible
+}
+@enduml

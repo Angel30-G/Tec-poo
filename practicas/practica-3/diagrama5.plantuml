@@ -1,0 +1,24 @@
+@startuml 
+class Encuesta
+Encuesta : +int NumeroUsuario
+Encuesta : +Resultados()
+class Cuestionario{
+    +ConsultaEncuesta()
+    +ConsultaTemaInteres()
+    -LlenarCuestionario()
+    -PreguntasCuestionario()
+}
+class Usuario{
+    -String Nombre
+    -String Apellido
+    +String NombreUsuario
+    +String Correo 
+    +String TemaDeInteres
+    -ClaveUnica()
+    -Incribirse()
+}
+
+Encuesta o-- Usuario
+Encuesta o-- Cuestionario
+Usuario --> Cuestionario
+@enduml

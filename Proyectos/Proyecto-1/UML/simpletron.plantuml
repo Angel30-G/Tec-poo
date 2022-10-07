@@ -1,5 +1,6 @@
 @startuml 
 abstract class CodigosOperaciones
+CodigosOperaciones : #variable
 CodigosOperaciones : #Leer
 CodigosOperaciones : #Escribir
 CodigosOperaciones : #Cargar
@@ -15,23 +16,20 @@ CodigosOperaciones : #BifurcaZero
 CodigosOperaciones : #BifurcaPositivo
 CodigosOperaciones : #Parar
 class Terminal{
-    +void run()
+    +void execute()
 }
 class Simpletron{
     -int memory
-    -int acumulator
-    -int instructionCounter
-    -int instructionRegister
-    -int operationCode
-    -int operand
-    -bool run
-    +void run()
-    -void welcomeMessage()
-    -void execute()
-    -void loadCode()
-    -void operations()
+    -int numEntry
+    -int acumulador
+    -int secuenciaInstruccion
+    -int codigoOperacion
+    -bool finish()
+    +void execute()
+    -void terminarInstruccion()
+    -void rangeOperationNum()
+    -void funciones()
 }
 CodigosOperaciones --|> Simpletron
 Terminal o-- Simpletron
 @enduml
-

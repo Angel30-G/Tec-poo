@@ -10,7 +10,7 @@ import javax.swing. *;
 import java.io.File;
 
 public class partida {
-	public void jugar() {
+	public String jugar() {
     Scanner scanner = new Scanner(System.in);
     Scanner scanner2 = new Scanner(System.in);
     String userGuess1 = "";
@@ -35,5 +35,6 @@ public class partida {
     }while(!juego.ganador());
     
     System.out.println("Has ganado");
+            return null;
   }
 }
